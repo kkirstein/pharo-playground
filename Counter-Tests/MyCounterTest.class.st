@@ -9,10 +9,11 @@ Class {
 
 { #category : #tests }
 MyCounterTest >> testCreatingMyCounter [
-  "A test that will check if the creation of an object MyCounter is done properly"
-  |tmp|
-  tmp := MyCounter new.
-  self deny: (tmp = nil)
+	"A test that will check if the creation of an object MyCounter is done properly"
+
+	| tmp |
+	tmp := MyCounter new.
+	self deny: tmp isNil
 ]
 
 { #category : #tests }
@@ -23,7 +24,7 @@ MyCounterTest >> testDecrementing [
   counter := MyCounter new.
   counter value: 5.
   counter decrement.
-  self assert: (counter value = 4)
+  self assert: counter value equals: 4.
 
 ]
 
@@ -35,7 +36,7 @@ MyCounterTest >> testIncrementing [
   counter := MyCounter new.
   counter value: 5.
   counter increment.
-  self assert: (counter value = 6)
+  self assert: counter value equals: 6.
 
 ]
 
