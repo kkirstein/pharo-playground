@@ -38,3 +38,12 @@ MyCounterTest >> testIncrementing [
   self assert: (counter value = 6)
 
 ]
+
+{ #category : #tests }
+MyCounterTest >> testInitializing [
+	" A test that will initialize Counter with its default value"
+	|counter|
+	counter := MyCounter new.
+	counter init.
+	self assert: counter value equals: 0.
+]
