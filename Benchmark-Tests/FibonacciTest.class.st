@@ -9,7 +9,7 @@ Class {
 
 { #category : #tests }
 FibonacciTest >> testFib [
-	"Test tail-optimized recursive implementation of Fibonacci numbers"
+	"Test tail-optimzed recursive implementation of Fibonacci numbers"
 	
 	self assert: (Fibonacci fib: 0) equals: 0.
 	self assert: (Fibonacci fib: 1) equals: 1.
@@ -18,6 +18,19 @@ FibonacciTest >> testFib [
 	self assert: (Fibonacci fib: 4) equals: 3.
 	self assert: (Fibonacci fib: 10) equals: 55.
 	self assert: (Fibonacci fib: 30) equals: 832040.
+]
+
+{ #category : #tests }
+FibonacciTest >> testFibIter [
+	"Test iterative implementation of Fibonacci numbers"
+	
+	self assert: (Fibonacci fibIter: 0) equals: 0.
+	self assert: (Fibonacci fibIter: 1) equals: 1.
+	self assert: (Fibonacci fibIter: 2) equals: 1.
+	self assert: (Fibonacci fibIter: 3) equals: 2.
+	self assert: (Fibonacci fibIter: 4) equals: 3.
+	self assert: (Fibonacci fibIter: 10) equals: 55.
+	self assert: (Fibonacci fibIter: 30) equals: 832040.
 ]
 
 { #category : #tests }
