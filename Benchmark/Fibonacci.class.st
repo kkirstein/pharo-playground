@@ -30,6 +30,23 @@ Fibonacci class >> fibAux: n a: a b: b [
 ]
 
 { #category : #api }
+Fibonacci class >> fibIter: anInteger [
+	"Calculates Fibonacci number with a naive recursive implementation"
+
+	| a b tmp |
+	a := 1.
+	b := 1.
+	"^ anInteger to: 1 do: [ :n | a := b. b := a + b. ]."
+	^ anInteger < 2
+		ifTrue: anInteger
+		ifFalse: [ 
+			2 to: anInteger - 1 do: [ :n | tmp := a. a := b. b := tmp + b. ].
+			b
+	]
+
+]
+
+{ #category : #api }
 Fibonacci class >> fibNaive: anInteger [
 	"Calculates Fibonacci number with a naive recursive implementation"
 	
