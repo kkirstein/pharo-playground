@@ -32,7 +32,7 @@ Runner >> runTask: aTask label: aLabel [
 	"Runs *aTask* and outputs its result and elapsed time."
 	
 	| res elap |
-	elap := Time microsecondsToRun: [ res := aTask ].
-	self output show: ('{1} = {2} Elapsed time: {3}' format: { aLabel. res. elap. }); cr.
+	elap := Time microsecondsToRun: [ res := [ aTask ] ].
+	self output show: ('{1} = {2} Elapsed time: {3}s' format: { aLabel. res. (elap/1e6) asFloat }); cr.
 	
 ]
