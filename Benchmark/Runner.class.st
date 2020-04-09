@@ -27,6 +27,19 @@ Runner >> output: aTranscript [
 	output := aTranscript
 ]
 
+{ #category : #'as yet unclassified' }
+Runner >> runFibonacci [
+	"Runs a number of FIbonacci benchmarks."
+	
+	self output show: 'Fibonacci Numbers'; cr.
+	self output show: '-----------------'; cr.
+
+	self runTask: [ Fibonacci fibNaive: 35 ] label: 'fibNaive(35)'.
+	self runTask: [ Fibonacci fib: 1000 ] label: 'fib(1000)'.
+	self runTask: [ Fibonacci fibIter: 1000 ] label: 'fibIter(1000)'.
+
+]
+
 { #category : #api }
 Runner >> runTask: aTask label: aLabel [
 	"Runs *aTask* and outputs its result and elapsed time."
