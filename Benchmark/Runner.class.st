@@ -27,7 +27,7 @@ Runner >> output: aTranscript [
 	output := aTranscript
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #api }
 Runner >> runFibonacci [
 	"Runs a number of FIbonacci benchmarks."
 	
