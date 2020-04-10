@@ -12,3 +12,14 @@ Integer >> isPerfect [
 			sum = self value ]
 		ifFalse: false
 ]
+
+{ #category : #'*Benchmark' }
+Integer >> perfectNumbers [
+	"Answer a collection of perfect number up to given receiver value."
+
+	| res |
+	res := OrderedCollection new.
+	1 to: self value do: [ :i | i isPerfect ifTrue: [ res addLast: i ] ].
+	^ res
+	
+]

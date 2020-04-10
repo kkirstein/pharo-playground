@@ -23,3 +23,11 @@ PerfectNumberTest >> testIsPerfect [
 	self assert: 29 isPerfect equals: false.
 	
 ]
+
+{ #category : #tests }
+PerfectNumberTest >> testPerfectNumbers [
+	"Test collection of perfect numbers."
+	
+	self assert: 100 perfectNumbers equals: (OrderedCollection newFrom: { 6. 28. })
+
+]
