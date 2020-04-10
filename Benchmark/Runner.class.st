@@ -41,6 +41,17 @@ Runner >> runFibonacci [
 ]
 
 { #category : #api }
+Runner >> runPerfectNumber [
+	"Runs a number of perfect number benchmarks."
+	
+	self output show: 'Perfect Numbers'; cr.
+	self output show: '---------------'; cr.
+
+	self runTask: [ 1000 perfectNumbers ] label: 'perfectNumbers(100)'.
+
+]
+
+{ #category : #api }
 Runner >> runTask: aTask label: aLabel [
 	"Runs *aTask* and outputs its result and elapsed time."
 	
