@@ -47,7 +47,7 @@ Runner >> runPerfectNumber [
 	self output show: 'Perfect Numbers'; cr.
 	self output show: '---------------'; cr.
 
-	self runTask: [ 1000 perfectNumbers ] label: 'perfectNumbers(100)'.
+	self runTask: [ 10000 perfectNumbers ] label: 'perfectNumbers(10000)'.
 
 ]
 
