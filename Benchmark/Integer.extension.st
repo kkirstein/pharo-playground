@@ -6,10 +6,10 @@ Integer >> isPerfect [
 
 	| sum |
 	sum := 0.
-	^ self value > 0
+	^ self > 0
 		ifTrue:
-			[ 1 to: (self value - 1) do: [ :i | (self value isDivisibleBy: i) ifTrue: [ sum := sum + i ] ].
-			sum = self value ]
+			[ 1 to: (self - 1) do: [ :i | (self isDivisibleBy: i) ifTrue: [ sum := sum + i ] ].
+			sum = self ]
 		ifFalse: false
 ]
 
@@ -19,7 +19,7 @@ Integer >> perfectNumbers [
 
 	| res |
 	res := OrderedCollection new.
-	1 to: self value do: [ :i | i isPerfect ifTrue: [ res addLast: i ] ].
+	1 to: self do: [ :i | i isPerfect ifTrue: [ res addLast: i ] ].
 	^ res
 	
 ]
