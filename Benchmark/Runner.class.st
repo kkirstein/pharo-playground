@@ -29,7 +29,7 @@ Runner >> output: aTranscript [
 
 { #category : #api }
 Runner >> runFibonacci [
-	"Runs a number of FIbonacci benchmarks."
+	"Runs a number of Fibonacci benchmarks."
 	
 	self output show: 'Fibonacci Numbers'; cr.
 	self output show: '-----------------'; cr.
@@ -37,6 +37,8 @@ Runner >> runFibonacci [
 	self runTask: [ Fibonacci fibNaive: 35 ] label: 'fibNaive(35)'.
 	self runTask: [ Fibonacci fib: 1000 ] label: 'fib(1000)'.
 	self runTask: [ Fibonacci fibIter: 1000 ] label: 'fibIter(1000)'.
+	
+	self output cr.
 
 ]
 
@@ -48,6 +50,8 @@ Runner >> runPerfectNumber [
 	self output show: '---------------'; cr.
 
 	self runTask: [ 10000 perfectNumbers ] label: 'perfectNumbers(10000)'.
+	
+	self output cr.
 
 ]
 
