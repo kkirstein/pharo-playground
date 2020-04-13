@@ -15,6 +15,20 @@ Class {
 	#category : #Benchmark
 }
 
+{ #category : #'instance creation' }
+Runner class >> newAndRun [
+	"Instantiate new Runner object and run benchmarks."
+	
+	| runner |
+	runner := self new.
+	runner output: (Transcript open; clear).
+
+	runner runFibonacci.
+	runner runPerfectNumber.
+	^runner
+
+]
+
 { #category : #accessing }
 Runner >> output [
 	"Method that returns output value"
