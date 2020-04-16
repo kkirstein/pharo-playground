@@ -48,9 +48,9 @@ Runner >> runFibonacci [
 	self output show: 'Fibonacci Numbers'; cr.
 	self output show: '-----------------'; cr.
 
-	self runTask: [ Fibonacci fibNaive: 35 ] label: 'fibNaive(35)'.
-	self runTask: [ Fibonacci fib: 1000 ] label: 'fib(1000)'.
-	self runTask: [ Fibonacci fibIter: 1000 ] label: 'fibIter(1000)'.
+	self runTask: [ 35 fibNaive ] label: 'fibNaive(35)'.
+	self runTask: [ 1000 fib ] label: 'fib(1000)'.
+	self runTask: [ 1000 fibIter ] label: 'fibIter(1000)'.
 	
 	self output cr.
 
