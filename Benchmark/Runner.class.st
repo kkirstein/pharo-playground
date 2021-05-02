@@ -72,10 +72,11 @@ Runner >> runPerfectNumber [
 { #category : #api }
 Runner >> runTask: aTask label: aLabel [
 	"Runs *aTask* and outputs its result and elapsed time."
-	
+
 	| res elap |
 	elap := Time microsecondsToRun: [ res := aTask value ].
-	self output show: ('{1} = {2}' format: { aLabel. res.  }); cr.
-	self output show: ('Elapsed time: {1}ms' format: {(elap/1e3) asFloat}); cr.
-	
+	self output show: ('{1} = {2}' format: {aLabel. res});
+		cr;
+		show: ('Elapsed time: {1}ms' format: {(elap / 1e3) asFloat});
+		cr
 ]
